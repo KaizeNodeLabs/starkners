@@ -59,7 +59,7 @@ Now you’re ready to play! 🚀
 
 We welcome contributions from the community! Whether it's bug fixes, new features, or improvements, your help is appreciated.  
 
-🔹 **Check out our Contribution Guidelines:** [Contribution Guide](https://github.com/KaizeNodeLabs/starkners/issues)  
+🔹 **Check out our Contribution Guidelines:** [Contribution Guidelines](https://github.com/KaizeNodeLabs/starkners/issues)  
 🔹 **Report Issues & Suggest Features:** Open an issue on GitHub  
 🔹 **Fork & Submit a PR:** Follow best practices and submit your pull request  
 
