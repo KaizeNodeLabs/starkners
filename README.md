@@ -1,4 +1,6 @@
-# 🎲 STARKNERS  
+
+![image](https://github.com/user-attachments/assets/4b71f2d7-35f0-406c-98c5-1b64522c654a)
+
 
 **Starkners** is an **on-chain Checkers game** built on **Starknet**, powered by **Dojo Engine**.  
 
