@@ -9,7 +9,7 @@ import { setupWorld } from "./typescript/contracts.gen.ts";
 
 import "./index.css";
 import { dojoConfig } from "../dojoConfig.ts";
-import StarknetProvider from "./starknet-provider.tsx";
+import StarknetProvider from "./contexts/StarknetProvider.tsx";
 import AppRouter from "./Router.tsx";
 
 /**
