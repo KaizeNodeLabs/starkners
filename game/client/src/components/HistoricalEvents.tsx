@@ -1,6 +1,6 @@
 import { ParsedEntity } from "@dojoengine/sdk";
 import { useAccount } from "@starknet-react/core";
-import { SchemaType } from "./typescript/models.gen";
+import { SchemaType } from "../typescript/models.gen";
 import { AccountInterface, addAddressPadding } from "starknet";
 import { useEffect, useState } from "react";
 import { Subscription } from "@dojoengine/torii-client";

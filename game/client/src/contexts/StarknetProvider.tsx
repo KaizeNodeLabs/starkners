@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from "react";
 import { mainnet } from "@starknet-react/chains";
 import { jsonRpcProvider, StarknetConfig, voyager } from "@starknet-react/core";
-import { dojoConfig } from "../dojoConfig";
+import { dojoConfig } from "../../dojoConfig";
 import {
     predeployedAccounts,
     PredeployedAccountsConnector,
