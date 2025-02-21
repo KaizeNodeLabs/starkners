@@ -15,9 +15,10 @@ pub struct Moves {
 pub struct DirectionsAvailable {
     #[key]
     pub player: ContractAddress,
-    pub directions: Array<Direction>,
+    pub up: bool,
+    pub down: bool,
+    pub both: bool,
 }
-
 #[derive(Copy, Drop, Serde, Debug)]
 #[dojo::model]
 pub struct Position {

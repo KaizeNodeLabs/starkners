@@ -1,5 +1,4 @@
 import type { SchemaType as ISchemaType } from "@dojoengine/sdk";
-
 import {
     CairoCustomEnum,
     CairoOption,
@@ -12,12 +11,16 @@ type WithFieldOrder<T> = T & { fieldOrder: string[] };
 // Type definition for `dojo_starter::models::DirectionsAvailable` struct
 export interface DirectionsAvailable {
     player: string;
-    directions: Array<DirectionEnum>;
+    up: boolean;
+    down: boolean;
+    both: boolean;
 }
 
 // Type definition for `dojo_starter::models::DirectionsAvailableValue` struct
 export interface DirectionsAvailableValue {
-    directions: Array<DirectionEnum>;
+    up: boolean;
+    down: boolean;
+    both: boolean;
 }
 
 // Type definition for `dojo_starter::models::Moves` struct
@@ -85,30 +88,21 @@ export interface SchemaType extends ISchemaType {
         MovedValue: WithFieldOrder<MovedValue>;
     };
 }
+
 export const schema: SchemaType = {
     dojo_starter: {
         DirectionsAvailable: {
-            fieldOrder: ["player", "directions"],
+            fieldOrder: ["player", "up", "down", "both"],
             player: "",
-            directions: [
-                new CairoCustomEnum({
-                    Left: "",
-                    Right: undefined,
-                    Up: undefined,
-                    Down: undefined,
-                }),
-            ],
+            up: false,
+            down: false,
+            both: false,
         },
         DirectionsAvailableValue: {
-            fieldOrder: ["directions"],
-            directions: [
-                new CairoCustomEnum({
-                    Left: "",
-                    Right: undefined,
-                    Up: undefined,
-                    Down: undefined,
-                }),
-            ],
+            fieldOrder: ["up", "down", "both"],
+            up: false,
+            down: false,
+            both: false,
         },
         Moves: {
             fieldOrder: ["player", "remaining", "last_direction", "can_move"],
@@ -158,6 +152,7 @@ export const schema: SchemaType = {
         },
     },
 };
+
 export enum ModelsMapping {
     Direction = "dojo_starter-Direction",
     DirectionsAvailable = "dojo_starter-DirectionsAvailable",
