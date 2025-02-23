@@ -1,25 +1,20 @@
 import type { SchemaType as ISchemaType } from "@dojoengine/sdk";
-
 import {
     CairoCustomEnum,
     CairoOption,
     CairoOptionVariant,
     BigNumberish,
 } from "starknet";
-
 type WithFieldOrder<T> = T & { fieldOrder: string[] };
-
 // Type definition for `dojo_starter::models::DirectionsAvailable` struct
 export interface DirectionsAvailable {
     player: string;
     directions: Array<DirectionEnum>;
 }
-
 // Type definition for `dojo_starter::models::DirectionsAvailableValue` struct
 export interface DirectionsAvailableValue {
     directions: Array<DirectionEnum>;
 }
-
 // Type definition for `dojo_starter::models::Moves` struct
 export interface Moves {
     player: string;
@@ -27,42 +22,35 @@ export interface Moves {
     last_direction: CairoOption<DirectionEnum>;
     can_move: boolean;
 }
-
 // Type definition for `dojo_starter::models::MovesValue` struct
 export interface MovesValue {
     remaining: BigNumberish;
     last_direction: CairoOption<DirectionEnum>;
     can_move: boolean;
 }
-
 // Type definition for `dojo_starter::models::Position` struct
 export interface Position {
     player: string;
     vec: Vec2;
 }
-
 // Type definition for `dojo_starter::models::PositionValue` struct
 export interface PositionValue {
     vec: Vec2;
 }
-
 // Type definition for `dojo_starter::models::Vec2` struct
 export interface Vec2 {
     x: BigNumberish;
     y: BigNumberish;
 }
-
 // Type definition for `dojo_starter::systems::actions::actions::Moved` struct
 export interface Moved {
     player: string;
     direction: DirectionEnum;
 }
-
 // Type definition for `dojo_starter::systems::actions::actions::MovedValue` struct
 export interface MovedValue {
     direction: DirectionEnum;
 }
-
 // Type definition for `dojo_starter::models::Direction` enum
 export type Direction = {
     Left: string;
@@ -71,7 +59,6 @@ export type Direction = {
     Down: string;
 };
 export type DirectionEnum = CairoCustomEnum;
-
 export interface SchemaType extends ISchemaType {
     dojo_starter: {
         DirectionsAvailable: WithFieldOrder<DirectionsAvailable>;
