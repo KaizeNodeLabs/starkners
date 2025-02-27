@@ -2,6 +2,16 @@ use starknet::{ContractAddress};
 
 #[derive(Copy, Drop, Serde, Debug)]
 #[dojo::model]
+pub struct Piece {
+    #[key]
+    pub player: ContractAddress,
+    #[key]
+    pub id: u8,
+    pub color: felt252,
+}
+
+#[derive(Copy, Drop, Serde, Debug)]
+#[dojo::model]
 pub struct Player {
     #[key]
     pub address: ContractAddress,
