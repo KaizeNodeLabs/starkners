@@ -6,7 +6,7 @@ pub struct Piece {
     #[key]
     pub player: ContractAddress,
     #[key]
-    pub id: ContractAddress,
+    pub id: u8,
     pub color: felt252,
 }
 
