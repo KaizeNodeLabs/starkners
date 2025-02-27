@@ -12,6 +12,15 @@ pub struct Piece {
 
 #[derive(Copy, Drop, Serde, Debug)]
 #[dojo::model]
+pub struct Player {
+    #[key]
+    pub address: ContractAddress,
+    pub score: u8,
+    pub remaining_pieces: u8,
+}
+
+#[derive(Copy, Drop, Serde, Debug)]
+#[dojo::model]
 pub struct Moves {
     #[key]
     pub player: ContractAddress,
