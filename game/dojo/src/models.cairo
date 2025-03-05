@@ -29,6 +29,15 @@ pub struct Moves {
     pub can_move: bool,
 }
 
+#[derive(Copy, Drop, Serde, Debug)]
+#[dojo::model]
+pub struct Coordinates {
+    #[key]
+    pub pieceID: u8,
+    pub x: u8,
+    pub y: u8
+}
+
 #[derive(Drop, Serde, Debug)]
 #[dojo::model]
 pub struct DirectionsAvailable {
@@ -38,6 +47,7 @@ pub struct DirectionsAvailable {
     pub down: bool,
     pub both: bool,
 }
+
 #[derive(Copy, Drop, Serde, Debug)]
 #[dojo::model]
 pub struct Position {
@@ -46,7 +56,6 @@ pub struct Position {
     pub vec: Vec2,
 }
 
-
 #[derive(Serde, Copy, Drop, Introspect, PartialEq, Debug)]
 pub enum Direction {
     Left,
@@ -54,7 +63,6 @@ pub enum Direction {
     Up,
     Down,
 }
-
 
 #[derive(Copy, Drop, Serde, IntrospectPacked, Debug)]
 pub struct Vec2 {
